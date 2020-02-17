@@ -1,0 +1,10 @@
+C:\Users\gaffn\source\repos\cis311_assignment5\bin\Debug\assignment5.exe.config
+C:\Users\gaffn\source\repos\cis311_assignment5\bin\Debug\assignment5.exe
+C:\Users\gaffn\source\repos\cis311_assignment5\bin\Debug\assignment5.pdb
+C:\Users\gaffn\source\repos\cis311_assignment5\bin\Debug\assignment5.xml
+C:\Users\gaffn\source\repos\cis311_assignment5\obj\Debug\assignment5.vbprojAssemblyReference.cache
+C:\Users\gaffn\source\repos\cis311_assignment5\obj\Debug\assignment5.Resources.resources
+C:\Users\gaffn\source\repos\cis311_assignment5\obj\Debug\assignment5.vbproj.GenerateResource.cache
+C:\Users\gaffn\source\repos\cis311_assignment5\obj\Debug\assignment5.exe
+C:\Users\gaffn\source\repos\cis311_assignment5\obj\Debug\assignment5.xml
+C:\Users\gaffn\source\repos\cis311_assignment5\obj\Debug\assignment5.pdb
