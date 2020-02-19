@@ -74,4 +74,8 @@ Public Class clsEmployeeSale
         Me.sngModelSales = sngModelSales
         Me.intModelQuantity = intModelQuantity
     End Sub
+
+    Public Overrides Function ToString() As String
+
+    End Function
 End Class

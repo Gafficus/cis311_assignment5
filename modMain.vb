@@ -20,6 +20,22 @@
 '- (None)                                                   -
 '------------------------------------------------------------
 Module modMain
+    Enum enuConstructor
+        strFirstName
+        strLastName
+        intOrderID
+        intID
+        sngGamesSales
+        intGamesQuantity
+        sngDollsSales
+        intDollsQuantity
+        sngBuildingSales
+        intBuildingQuantity
+        sngModelSales
+        intModelQuantity
+
+    End Enum
+    Dim lstEmployeeList As List(Of clsEmployeeSale)
     '------------------------------------------------------------
     '-                Subprogram Name: Main                     -
     '------------------------------------------------------------
@@ -40,15 +56,13 @@ Module modMain
     '- (None)                                                   -
     '------------------------------------------------------------
     Sub Main()
-        loadFile()
-        readData()
+        loadFile("ToyOrder.txt")
         writeHeader()
         writeEmployeeInfo()
         writeHeader()
     End Sub
 
     Private Sub writeEmployeeInfo()
-        Throw New NotImplementedException()
     End Sub
 
     Private Sub writeHeader()
@@ -71,12 +85,31 @@ Module modMain
     '-alert the user-
     '------------------------------------------------------------
     '- Parameter Dictionary (in parameter order):               -
-    '- None                                                     -
+    '- filePath - provides the file path                        -
     '------------------------------------------------------------
     '- Local Variable Dictionary (alphabetically):              -
     '- (None)                                                   -
     '------------------------------------------------------------
-    Private Sub loadFile()
-        Throw New NotImplementedException()
+    Private Sub loadFile(ByVal filePath As String)
+        Dim objMyStreamReader As System.IO.StreamReader
+        Dim strLineContents As String
+        objMyStreamReader = System.IO.File.OpenText(filePath)
+        While Not (objMyStreamReader.EndOfStream)
+            strLineContents = objMyStreamReader.ReadLine()
+            Dim strContents() As String = Split(strLineContents, vbTab)
+            lstEmployeeList.Add(New clsEmployeeSale(strContents(enuConstructor.strFirstName),
+                                                strContents(enuConstructor.strLastName),
+                                                strContents(enuConstructor.intOrderID),
+                                                strContents(enuConstructor.intID),
+                                                strContents(enuConstructor.sngGamesSales),
+                                                strContents(enuConstructor.intGamesQuantity),
+                                                strContents(enuConstructor.sngDollsSales),
+                                                strContents(enuConstructor.intDollsQuantity),
+                                                strContents(enuConstructor.sngBuildingSales),
+                                                strContents(enuConstructor.intBuildingQuantity),
+                                                strContents(enuConstructor.sngModelSales),
+                                                strContents(enuConstructor.intModelQuantity)))
+        End While
+        objMyStreamReader.Close()
     End Sub
 End Module
